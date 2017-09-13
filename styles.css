@@ -1,0 +1,177 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
+@import 'https://fonts.googleapis.com/css?family=Maven+Pro';
+
+.restbody {
+  font-family: 'Alegreya Sans', sans-serif;
+  min-width: 300px;
+  height: 30vh;
+  width: 30%;
+  margin: 0vh auto 0;
+  padding-top: 40px;
+}
+
+body{
+  font-family: 'Alegreya Sans', sans-serif;
+  height: 30px;
+  background: linear-gradient(to right, #834d9b, #d04ed6);
+  color: #282828;
+}
+
+li {
+  width: 103%;
+  height: 8px;
+    float: right;
+
+}
+
+a {
+    display: block;
+    padding: -10px;
+    background-color: #ecf0f1;
+}
+ul{
+  list-style-type: none;
+}
+
+h1 {
+  align-content: center;
+  color: white;
+}
+h2 {
+  color: white;
+}
+
+
+p{
+  font-family: 'Maven Pro', sans-serif;
+}
+.task {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.abstract,
+.fold {
+  width: 100%;
+  padding: 15px 30px;
+  position: relative;
+  background: white;
+}
+.task:hover .abstract, .task:hover
+.fold {
+  background: #fafafa;
+}
+
+.abstract {
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.fold {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: .3s transform ease;
+  transition: .3s transform ease;
+}
+.fold:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: grey;
+}
+.task:hover .fold {
+  max-height: none;
+  overflow: visible;
+  visibility: visible;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+
+.details {
+  padding: 15px 30px;
+}
+.details body {
+  width: 30%;
+  min-width: 300px;
+  height: 80vh;
+  margin: 20vh auto 0;
+  background: -webkit-linear-gradient(right, #FF512F, #DD2476);
+  background: linear-gradient(to left, #FF512F, #DD2476);
+  color: #282828;
+}
+.details h1 {
+  color: white;
+}
+.details .task {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.details .abstract, .details .fold {
+  width: 100%;
+  padding: 15px 30px;
+  position: relative;
+  background: white;
+}
+.task:hover .details .abstract, .task:hover .details .fold {
+  background: #fafafa;
+}
+.details.abstract {
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+.details .fold {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: .3s transform ease;
+  transition: .3s transform ease;
+}
+.details .fold:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: grey;
+}
+.task:hover .details .fold {
+  max-height: none;
+  overflow: visible;
+  visibility: visible;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+.details .details {
+  padding: 15px 30px;
+}
